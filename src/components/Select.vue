@@ -270,7 +270,7 @@
     <div ref="toggle" @mousedown.prevent="toggleDropdown" class="dropdown-toggle">
 
       <span class="selected-tag" v-for="option in valueAsArray" v-bind:key="option.index">
-        {{ getOptionLabel(option) }}
+        <span v-html="getOptionLabel(option)"></span>
         <button v-if="multiple" @click="deselect(option)" type="button" class="close">
           <span aria-hidden="true">&times;</span>
         </button>
