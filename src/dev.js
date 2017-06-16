@@ -29,6 +29,9 @@ new Vue({
         vm.ajaxRes = res.data.items
         loading(false)
       })
-    }, 250)
+    }, 250),
+    htmlLabel(option) {
+      return `<strong><em>${option.label}</em></strong>`
+    }
   }
 })

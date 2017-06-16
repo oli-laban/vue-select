@@ -304,12 +304,10 @@
     <transition :name="transition">
       <ul ref="dropdownMenu" v-if="dropdownOpen" class="dropdown-menu" :style="{ 'max-height': maxHeight }">
         <li v-for="(option, index) in filteredOptions" v-bind:key="index" :class="{ active: isOptionSelected(option), highlight: index === typeAheadPointer }" @mouseover="typeAheadPointer = index">
-          <a @mousedown.prevent="select(option)">
-            {{ getOptionLabel(option) }}
-          </a>
+          <a @mousedown.prevent="select(option)" v-html="getOptionLabel(option)"></a>
         </li>
         <li v-if="!filteredOptions.length" class="no-options">
-          <slot name="no-options">Sorry, no matching options.</slot>
+          <slot name="no-options">Sorry, no matching options</slot>
         </li>
       </ul>
     </transition>
