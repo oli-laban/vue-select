@@ -348,6 +348,15 @@
       },
 
       /**
+       * Enable/Disable deselect the option by double selecting it.
+       * @type {Boolean}
+       */
+      toggleSelectOption: {
+        type: Boolean,
+        default: true
+      },
+
+      /**
        * Sets the max-height property on the dropdown list.
        * @deprecated
        * @type {String}
